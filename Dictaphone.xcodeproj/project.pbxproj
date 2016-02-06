@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1543DA3B1C443E1F00C8241E /* AudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543DA3A1C443E1F00C8241E /* AudioFile.swift */; };
 		154AF3CC1C1CA61A0073B1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154AF3CB1C1CA61A0073B1D9 /* AppDelegate.swift */; };
 		154AF3CE1C1CA61A0073B1D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154AF3CD1C1CA61A0073B1D9 /* ViewController.swift */; };
 		154AF3D11C1CA61A0073B1D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154AF3CF1C1CA61A0073B1D9 /* Main.storyboard */; };
 		154AF3D31C1CA61A0073B1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154AF3D21C1CA61A0073B1D9 /* Assets.xcassets */; };
 		154AF3D61C1CA61A0073B1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154AF3D41C1CA61A0073B1D9 /* LaunchScreen.storyboard */; };
+		156FFD071C3F12BB000B1C01 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFD061C3F12BB000B1C01 /* FontAwesome.framework */; };
+		15EA22381C3C78A1001CD3A1 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EA22371C3C78A1001CD3A1 /* FileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1543DA3A1C443E1F00C8241E /* AudioFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFile.swift; sourceTree = "<group>"; };
 		154AF3C81C1CA61A0073B1D9 /* Dictaphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictaphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154AF3CB1C1CA61A0073B1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		154AF3CD1C1CA61A0073B1D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		154AF3D21C1CA61A0073B1D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		154AF3D51C1CA61A0073B1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154AF3D71C1CA61A0073B1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		156FFD061C3F12BB000B1C01 /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
+		15EA22371C3C78A1001CD3A1 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156FFD071C3F12BB000B1C01 /* FontAwesome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +45,7 @@
 		154AF3BF1C1CA61A0073B1D9 = {
 			isa = PBXGroup;
 			children = (
+				156FFD061C3F12BB000B1C01 /* FontAwesome.framework */,
 				154AF3CA1C1CA61A0073B1D9 /* Dictaphone */,
 				154AF3C91C1CA61A0073B1D9 /* Products */,
 			);
@@ -55,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				154AF3CB1C1CA61A0073B1D9 /* AppDelegate.swift */,
+				1543DA3A1C443E1F00C8241E /* AudioFile.swift */,
+				15EA22371C3C78A1001CD3A1 /* FileViewController.swift */,
 				154AF3CD1C1CA61A0073B1D9 /* ViewController.swift */,
 				154AF3CF1C1CA61A0073B1D9 /* Main.storyboard */,
 				154AF3D21C1CA61A0073B1D9 /* Assets.xcassets */,
@@ -74,6 +84,7 @@
 				154AF3C41C1CA61A0073B1D9 /* Sources */,
 				154AF3C51C1CA61A0073B1D9 /* Frameworks */,
 				154AF3C61C1CA61A0073B1D9 /* Resources */,
+				156FFD081C3F1417000B1C01 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -130,11 +141,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		156FFD081C3F1417000B1C01 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/FontAwesome.framework",
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		154AF3C41C1CA61A0073B1D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1543DA3B1C443E1F00C8241E /* AudioFile.swift in Sources */,
+				15EA22381C3C78A1001CD3A1 /* FileViewController.swift in Sources */,
 				154AF3CE1C1CA61A0073B1D9 /* ViewController.swift in Sources */,
 				154AF3CC1C1CA61A0073B1D9 /* AppDelegate.swift in Sources */,
 			);
@@ -249,6 +280,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Dictaphone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.csk.Dictaphone;
@@ -260,6 +295,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Dictaphone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.csk.Dictaphone;
@@ -286,6 +325,7 @@
 				154AF3DC1C1CA61A0073B1D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
